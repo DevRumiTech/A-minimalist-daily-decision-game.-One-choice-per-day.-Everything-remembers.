@@ -2,6 +2,9 @@ AFTERMATH
 
 One choice per day. Everything remembers.
 
+<img width="808" height="579" alt="Aftermath" src="https://github.com/user-attachments/assets/eb780a71-3301-4c31-9d59-00c82b31dd86" />
+
+
 AFTERMATH is a minimalist daily decision experience.
 Each day, the player makes exactly one irreversible choice.
 The system remembers every decision and quietly shapes what comes next.
