@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+  AFTERMATH
+  Main HTML entry point.
+  Game UI only. Logic lives in JS.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AFTERMATH — One choice per day</title>
+
+  <meta
+    name="description"
+    content="One irreversible choice per day. Everything remembers."
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!-- ================= GOOGLE ADSENSE (INACTIVE) ================= -->
+  <!--
+    WHEN READY:
+    1. Replace ca-pub-XXXXXXXXXXXXXXXX with your real publisher ID
+    2. Uncomment this script
+  -->
+  <!--
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  -->
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- ================= HEADER ================= -->
+    <header class="top">
+      <h1>AFTERMATH</h1>
+      <p class="tagline">One choice per day. Everything remembers.</p>
+    </header>
+
+    <!-- ================= STATUS ================= -->
+    <section class="status">
+      <div>
+        <span class="label">Today</span>
+        <span id="today"></span>
+      </div>
+      <div>
+        <span class="label">Next reset</span>
+        <span id="countdown"></span>
+      </div>
+      <div>
+        <span class="label">Memory</span>
+        <span id="memory"></span>
+      </div>
+    </section>
+
+    <!-- ================= DECISION ================= -->
+    <main class="card">
+      <div class="kicker" id="kicker"></div>
+      <h2 id="promptTitle"></h2>
+      <p id="promptBody"></p>
+      <div id="choices"></div>
+      <div id="locked" class="locked">
+        You already made today’s choice.
+      </div>
+    </main>
+
+    <!-- ================= AD SPACE ================= -->
+    <!--
+      THIS IS THE EXACT AD LOCATION.
+      When ready:
+      - Uncomment the <ins> block
+      - Replace data-ad-client + data-ad-slot
+    -->
+    <section class="ad-container">
+
+      <!--
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      -->
+
+      <!-- Placeholder shown until ads are enabled -->
+      <div class="ad-placeholder">Advertisement</div>
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+    <section class="timeline">
+      <h3>Timeline</h3>
+      <div id="timeline"></div>
+    </section>
+
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="js/utils.js"></script>
+  <script src="js/decisions.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

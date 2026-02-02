@@ -1,0 +1,190 @@
+/*
+  AFTERMATH — styles.css
+  ----------------------
+  Visual design for the game.
+  Purpose:
+  - Minimalist
+  - Serious
+  - Slightly ominous
+  - No visual noise
+*/
+
+/* ===== Root variables =====
+   Centralized colors & spacing so the mood is consistent
+*/
+:root {
+    --bg: #0b0c0f;        /* Background color */
+    --fg: #e9e9ef;        /* Primary text color */
+    --muted: #a0a0b0;     /* Secondary / quiet text */
+    --border: #1e1f2a;    /* Subtle borders */
+    --card: #12131a;      /* Card background */
+    --accent: #b7b7ff;    /* Accent for emphasis */
+    --radius: 14px;
+    --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  
+  /* ===== Global reset ===== */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 24px;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  }
+  
+  /* ===== App container ===== */
+  #app {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+  /* ===== Header ===== */
+  .top h1 {
+    margin: 0;
+    letter-spacing: 3px;
+  }
+  
+  .tagline {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  
+  /* ===== Status bar =====
+     Shows date, countdown, and memory hint
+  */
+  .status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 24px 0;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--card);
+    font-size: 13px;
+  }
+  
+  .status .label {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* ===== Decision card ===== */
+  .card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    background: var(--card);
+  }
+  
+  /* Category label above decision */
+  .kicker {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  
+  /* Decision title */
+  .card h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  /* Decision narrative */
+  .card p {
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  
+  /* ===== Choice buttons ===== */
+  #choices {
+    margin-top: 16px;
+  }
+  
+  #choices button {
+    width: 100%;
+    text-align: left;
+    padding: 14px;
+    margin-top: 10px;
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+  
+  /* Subtle hover — no flashy effects */
+  #choices button:hover {
+    border-color: var(--accent);
+  }
+  
+  /* ===== Locked notice =====
+     Shown after daily choice is made
+  */
+  .locked {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  
+  /* ===== Timeline ===== */
+  .timeline {
+    margin-top: 32px;
+  }
+  
+  .timeline h3 {
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  /* Individual timeline entry */
+  .timeline-entry {
+    border-left: 2px solid var(--border);
+    padding-left: 12px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  
+  /* Timestamp style */
+  .timeline-entry .date {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+  }
+
+  /* ===== Advertisement placeholder =====
+   Visible but subtle.
+   Can be replaced by real ads later.
+*/
+.ad-container {
+    margin: 28px 0;
+    padding: 16px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    background: var(--card);
+  }
+  
+  .ad-placeholder {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
